@@ -11,7 +11,7 @@ import os
 import logging
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}}) 
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -27,8 +27,6 @@ def generate_questions():
     print(f"Request method: {request.method}")
     print(f"Request headers: {request.headers}")
     print(f"Request data: {request.data}")
-    if request.method == "OPTIONS":
-        return _build_cors_preflight_response()
     try:
         data = request.json
         if not data:
