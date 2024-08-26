@@ -59,7 +59,7 @@ export default {
       if (this.wordCount < 100) return; // Extra check, though button should be disabled
 
       try {
-      const response = await api.post('/api/generate-questions', { text: this.userInput}, {
+      const response = await api.post('/generate-questions', { text: this.userInput}, {
         headers: { 'Content-Type': 'application/json' }
       });
       console.log('API response:', response);
