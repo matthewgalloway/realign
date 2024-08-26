@@ -1,23 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-  import FistPage from '../components/FirstPage.vue'
-  import SecondPage from '../components/SecondPage.vue'
-  import ThirdPage from '../components/ThirdPage.vue'
-  
+  import ProblemDefinition from '../components/ProblemDefinition.vue'
+  import FollowUpQuestions from '../components/FollowUpQuestions.vue'
+  import GeneratedSpeech from '../components/GeneratedSpeech.vue'
+  import LandingPage from '../components/LandingPage.vue'
+
   const routes = [
     {
       path: '/',
-      name: 'FirstPage',
-      component: FistPage
+      name: 'LandingPage',
+      component: LandingPage
     },
     {
-      path: '/page2',
-      name: 'SecondPage',
-      component: SecondPage
+      path: '/definition',
+      name: 'ProblemDefinition',
+      component: ProblemDefinition
     },
     {
-      path: '/page3',
-      name: 'ThirdPage',
-      component: ThirdPage
+      path: '/questions',
+      name: 'FollowUpQuestions',
+      component: FollowUpQuestions
+    },
+    {
+      path: '/speech',
+      name: 'GeneratedSpeech',
+      component: GeneratedSpeech
     }
   ]
   
