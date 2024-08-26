@@ -43,7 +43,7 @@ def generate_questions():
         logger.info(f"Generating questions for input: {user_input}")
         
         # Initialize ChatOpenAI model
-        model = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.3, api_key=openai_api_key)
+        model = ChatOpenAI(model_name="gpt-4", temperature=0.3, api_key=openai_api_key)
 
         # Create the prompt template
         prompt = ChatPromptTemplate.from_template(investigation_prompt)
@@ -90,7 +90,7 @@ def generate_speech():
         question_answers = "\n".join([f"Question: {q}\nAnswer: {a}" for q, a in zip(questions, answers)])
         
         # Initialize ChatOpenAI model
-        model = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.3, api_key=openai_api_key)
+        model = ChatOpenAI(model_name="gpt-4", temperature=0.3, api_key=openai_api_key)
 
         # Create the prompt template
         prompt = ChatPromptTemplate.from_template(advice_prompt)
