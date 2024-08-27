@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'  // Make sure to import your router
+import router from './router'  
+import store from './store'  
 
 const app = createApp(App)
 
@@ -10,4 +11,5 @@ app.config.errorHandler = (err, vm, info) => {
 };
 
 app.use(router)  // Use the router
+app.use(store)  // Use the Vuex store
 app.mount('#app')

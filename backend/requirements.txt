@@ -1,6 +1,15 @@
 Flask
 langchain
 openai
-python-dotenv
 langchain-community
 flask-cors
+Flask-SQLAlchemy
+psycopg2-binary
+Flask-Migrate
+Flask-Cors
+Flask-Login
+psycopg2-binary
+python-dotenv
+PyJWT
+Flask-Migrate
+flask-jwt-extended
