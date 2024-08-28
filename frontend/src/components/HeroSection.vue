@@ -11,12 +11,12 @@
       
       <!-- Text and Form -->
       <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pl-8">
-        <h1 class="text-4xl lg:text-5xl font-extrabold mb-6 text-shadow">Reconnect with your partner and improve your relationship</h1>
+        <h1 class="text-4xl lg:text-5xl font-extrabold mb-6 text-shadow">Generate your speech to reconnect with your partner</h1>
         <div class="bg-white text-gray-900 p-8 rounded-lg shadow-lg">
-          <h2 class="text-2xl font-bold mb-4">Start Reconnecting Today</h2>
+          <h2 class="text-2xl font-bold mb-4">Start Reconnecting Now</h2>
           <form @submit.prevent="handleSubmit" class="space-y-4">
             <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 border rounded" required />
-            <button type="submit" class="w-full bg-coral-500 text-white py-2 rounded hover:bg-coral-600 transition">Fix my communication in 10 minutes</button>
+            <button type="submit" class="w-full bg-coral-500 text-white py-2 rounded hover:bg-coral-600 transition">Fix my communication in under 10 minutes</button>
           </form>
         </div>
       </div>
@@ -24,6 +24,8 @@
   </template>
   
   <script>
+  import { useRouter } from 'vue-router';
+  
   export default {
     name: 'HeroSection',
     data() {
@@ -36,14 +38,19 @@
         ]
       }
     },
-    methods: {
-      handleSubmit() {
-        const handleSubmit = () => {
+    setup() {   
+      const router = useRouter();
+      
+      const handleSubmit = () => {
         console.log('Form submitted');
-        router.push({ name: 'UserRegister' })
+        router.push({ name: 'UserRegister' });
+      };
+  
+      return {
+        handleSubmit
       }
     }
-  }
+  };
   </script>
   
   <style scoped>

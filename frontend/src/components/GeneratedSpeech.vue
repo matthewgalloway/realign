@@ -1,15 +1,19 @@
 <template>
-  <div class="relative min-h-screen bg-gray-900 text-white">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-      <img src="/images/reconnecting-couple.jpg" alt="Reconnecting Couple" class="object-cover w-full h-full" />
+  <div class="min-h-screen bg-gray-900 text-white">
+    <!-- Top color bar with centered logo -->
+    <div class="bg-indigo-900 h-20 w-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div class="logo flex items-center">
+        <div class="w-12 h-12 bg-coral-500 rounded-full flex items-center justify-center mr-3">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+        </div>
+        <span class="text-3xl font-bold text-coral-500">ReAlign</span>
+      </div>
     </div>
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-
-    <!-- Content Overlay -->
-    <div class="relative z-10 container mx-auto px-4 py-8">
+    <!-- Content -->
+    <div class="container mx-auto px-4 py-8">
       <h1 class="text-4xl font-extrabold mb-6 text-center text-shadow">Your Constructive Communication</h1>
       <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-8 mb-8">
         <div class="text-left mb-6">
@@ -81,9 +85,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css';
 
+/* Additional custom styles */
 .bg-coral-500 {
   background-color: #FF6F61;
 }
