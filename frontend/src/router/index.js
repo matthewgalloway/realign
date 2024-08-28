@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-  import ProblemDefinition from '../components/ProblemDefinition.vue'
-  import FollowUpQuestions from '../components/FollowUpQuestions.vue'
-  import GeneratedSpeech from '../components/GeneratedSpeech.vue'
-  import LandingPage from '../components/LandingPage.vue'
+import ProblemDefinition from '../components/ProblemDefinition.vue'
+import FollowUpQuestions from '../components/FollowUpQuestions.vue'
+import GeneratedSpeech from '../components/GeneratedSpeech.vue'
+import LandingPage from '../components/LandingPage.vue'
+import UserLogin from '../components/UserLogin.vue'
+import UserRegister from '../components/UserRegister.vue'
+
 
   const routes = [
     {
@@ -13,17 +16,30 @@ import { createRouter, createWebHistory } from 'vue-router'
     {
       path: '/definition',
       name: 'ProblemDefinition',
-      component: ProblemDefinition
+      component: ProblemDefinition,
+      meta: { requiresAuth: true }
     },
     {
       path: '/questions',
       name: 'FollowUpQuestions',
-      component: FollowUpQuestions
+      component: FollowUpQuestions,
+      meta: { requiresAuth: true }
     },
     {
       path: '/speech',
       name: 'GeneratedSpeech',
-      component: GeneratedSpeech
+      component: GeneratedSpeech,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/login',
+      name: 'UserLogin',
+      component: UserLogin
+    },
+    {
+      path: '/register',
+      name: 'UserRegister',
+      component: UserRegister
     }
   ]
   
@@ -32,4 +48,7 @@ import { createRouter, createWebHistory } from 'vue-router'
     routes
   })
   
+
+
   export default router
+
