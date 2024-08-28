@@ -20,11 +20,12 @@
         <!-- Hero Section with embedded image -->
         <HeroSection class="mt-8" />
 
+        <!-- Feature Section -->
+        <FeatureSection/>
+
         <!-- Communication Techniques Section -->
         <CommunicationTechniques />
 
-        <!-- Feature Section -->
-        <FeatureSection/>
 
         <!-- Difficult Conversations Importance Section -->
         <DifficultyConversationsImportance />

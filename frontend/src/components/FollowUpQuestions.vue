@@ -50,6 +50,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Loading Spinner -->
+    <div v-if="isLoading" class="fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm">
+      <div class="bg-indigo-900 rounded-lg p-6 shadow-lg text-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-coral-500 border-solid mx-auto mb-4"></div>
+        <p class="text-white text-lg font-semibold">
+          Thank you for sharing, I'm applying the communication strategies and generating the best possible results for you.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -62,7 +72,8 @@ export default {
       questions: [],
       originalText: '',
       answers: [],
-      wordCounts: []
+      wordCounts: [],
+      isLoading: false
     }
   },
   computed: {
@@ -101,6 +112,7 @@ export default {
     async submitAnswers() {
       if (!this.allAnswersMeetWordCount) return;
 
+      this.isLoading = true;
       try {
         console.log('Submitting answers:', {
           originalText: this.originalText,
@@ -129,6 +141,8 @@ export default {
         console.error('Error:', error);
         console.error('Error response:', error.response);
         alert(`An error occurred: ${error.response?.data?.error || error.message}`);
+      } finally {
+        this.isLoading = false;
       }
     }
   }

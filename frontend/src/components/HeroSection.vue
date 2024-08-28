@@ -24,7 +24,7 @@
         </ul>
       <!-- New section to emphasize the script -->
       <div class="bg-coral-100 border-l-4 border-coral-500 p-4 mb-8 rounded-r-lg shadow-md animate-fade-in">
-        <p class="text-coral-700">Get a personalized script to navigate your important talks with confidence and clarity.</p>
+        <p class="text-coral-700">We take the answers you give and generate a personalized script for you to navigate your important talks with confidence and clarity.</p>
       </div>
 
         <div class="bg-white text-gray-900 p-8 rounded-lg shadow-lg">
@@ -52,8 +52,8 @@
         ],
         subPoints: [
           "Express yourself clearly and effectively to your partner, anytime.",
-          "Resolve relationship issues instantly.",
-          "No appointments, no waiting – just better understanding, on demand."
+          "No video appointments, no waiting – just better understanding, on demand.",
+          "Therapy-level solutions, for less than your monthly coffee budget",
         ]
       }
     },

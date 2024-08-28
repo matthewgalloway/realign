@@ -54,45 +54,68 @@
         </div>
       </div>
     </div>
+
+    <!-- Loading Spinner -->
+    <div v-if="isLoading" class="fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm">
+      <div class="bg-indigo-900 rounded-lg p-6 shadow-lg text-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-coral-500 border-solid mx-auto mb-4"></div>
+        <p class="text-white text-lg font-semibold">
+          Thank you for sharing, I'm considering how best to approach this
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import api from '@/api'; 
+import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
+import api from '@/api';
 
-export default {
-  data() {
-    return {
-      userInput: '',
-      wordCount: 0
-    }
-  },
-  methods: {
-    updateWordCount() {
-      this.wordCount = this.userInput.trim().split(/\s+/).filter(word => word.length > 0).length;
-    },
-    async submitThoughts() {
-      if (this.wordCount < 100) return; // Extra check, though button should be disabled
+export default defineComponent({
+  setup() {
+    const router = useRouter();
+    const userInput = ref('');
+    const wordCount = ref(0);
+    const isLoading = ref(false);
 
+    const updateWordCount = () => {
+      wordCount.value = userInput.value.trim().split(/\s+/).filter(word => word.length > 0).length;
+    };
+
+    const submitThoughts = async () => {
+      if (wordCount.value < 100) return;
+
+      isLoading.value = true;
       try {
-        const response = await api.post('/generate-questions', { text: this.userInput }, {
+        const response = await api.post('/generate-questions', { text: userInput.value }, {
           headers: { 'Content-Type': 'application/json' }
         });
         console.log('API response:', response);
-        this.$router.push({
+        router.push({
           name: 'FollowUpQuestions',
           query: {
             questions: JSON.stringify(response.data.questions),
-            originalText: this.userInput
+            originalText: userInput.value
           }
         });
       } catch (error) {
         console.error('Error:', error);
         alert('An error occurred. Please try again.');
+      } finally {
+        isLoading.value = false;
       }
-    }
+    };
+
+    return {
+      userInput,
+      wordCount,
+      isLoading,
+      updateWordCount,
+      submitThoughts
+    };
   }
-}
+});
 </script>
 
 <style>

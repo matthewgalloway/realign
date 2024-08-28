@@ -37,16 +37,22 @@
       return {
         currentIndex: 0,
         techniques: [
-          {
-            title: "Express Your Feelings First",
-            description: "We guide you to express your emotions before addressing the issue.",
-            example: "I feel overwhelmed when the house is messy. Can we create a cleaning schedule together?"
+        {
+            title: "Team Mindset",
+            description: "We reinforce that you and your partner are team working together on the problem of connection.",
+            example: "I’ve been feeling less of a connection lately and I think it’s important for us to talk about it so we can work through it together as a team."
           },
           {
             title: "Using \"I\" Statements",
             description: "We use \"I\" statements to express needs without blame.",
             example: "I need some quiet time to focus. Can we set a time when we both can work without interruptions?"
           },
+          {
+            title: "Express Your Feelings First",
+            description: "We guide you to express your emotions before addressing the issue.",
+            example: "I feel overwhelmed when the house is messy. Can we create a cleaning schedule together?"
+          },
+
           {
             title: "Being Specific",
             description: "We help you communicate clear, specific requests.",
