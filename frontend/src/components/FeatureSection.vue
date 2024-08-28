@@ -12,7 +12,7 @@
           </div>
           <div class="bg-gray-800 rounded-lg p-4 w-full flex flex-col justify-between" style="height: 150px;">
             <h3 class="text-xl font-semibold mb-2 text-coral-500 text-center">Expression</h3>
-            <p class="text-white text-center text-sm">We provide a space to express raw emotions and thoughts without judgement.</p>
+            <p class="text-white text-center text-sm">We provide a space for you to express raw emotions and thoughts without judgement.</p>
           </div>
         </div>
   
@@ -26,7 +26,7 @@
           </div>
           <div class="bg-gray-800 rounded-lg p-4 w-full flex flex-col justify-between" style="height: 150px;">
             <h3 class="text-xl font-semibold mb-2 text-coral-500 text-center">Idea Refinement</h3>
-            <p class="text-white text-center text-sm">We help you refine your ideas and dig deeper into the emotions you are feeling and why they are occuring.</p>
+            <p class="text-white text-center text-sm">We help you refine your ideas, dig deeper into the emotions and understand why they are occuring.</p>
           </div>
         </div>
   
@@ -51,7 +51,7 @@
           </div>
           <div class="bg-gray-800 rounded-lg p-4 w-full flex flex-col justify-between" style="height: 150px;">
             <h3 class="text-xl font-semibold mb-2 text-coral-500 text-center">Speech Generation</h3>
-            <p class="text-white text-center text-sm">We generate a speech for you to use with your partner to help you reconnect on the issues you are feeling.</p>
+            <p class="text-white text-center text-sm">We generate a script for you to use with your partner to help you reconnect on the issues you are feeling.</p>
           </div>
         </div>
       </div>

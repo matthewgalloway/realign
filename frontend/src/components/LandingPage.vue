@@ -12,21 +12,24 @@
       </div>
     </div>
       <!-- Content -->
-      <div class="px-4 sm:px-6 lg:px-8 py-8 -mt-8 max-w-full">
+      <div class="px-4 sm:px-6 lg:px-8 py-8 max-w-full">
 
-        <!-- Feature Section -->
-        <FeatureSection/>
+
   
   
         <!-- Hero Section with embedded image -->
-        <HeroSection />
-  
+        <HeroSection class="mt-8" />
+
+        <!-- Communication Techniques Section -->
+        <CommunicationTechniques />
+
+        <!-- Feature Section -->
+        <FeatureSection/>
 
         <!-- Difficult Conversations Importance Section -->
         <DifficultyConversationsImportance />
   
-        <!-- Communication Techniques Section -->
-        <CommunicationTechniques />
+
   
         <!-- Testimonials Section -->
         <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-8 mb-16">
